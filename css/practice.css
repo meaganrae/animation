@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: helvetica, sans-serif;
+  animation-name: bg-color;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.container {}
+
+.rectangle {
+  position: absolute;
+  background-color: black;
+  width: 20vw;
+  height: 100%;
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+.circle {
+  position: absolute;
+  left: 25%;
+  border-radius: 90px;
+  background-color: green;
+  width: 20vh;
+  height: 20vh;
+  animation-name: circle-bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+#animation {
+  color: orange;
+  font-size: 20px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+@keyframes bg-color {
+  from {
+    background-color: #736cfe;
+  }
+
+  to {
+    background-color: #f395ff;
+  }
+}
+
+@keyframes circle-bounce {
+  0% {
+    left: 25%;
+    top: 0%;
+  }
+
+  25% {
+    left: 45%;
+    top: 90%;
+    border-radius: 2px;
+    width: 30vh;
+    height: 0.5vh;
+  }
+
+  50% {
+    left: 75%;
+    top: 45%;
+    border-radius: 90px;
+    width: 20vh;
+  }
+
+  75% {
+    left: 45%;
+    top: 15%;
+    border-radius: 90px;
+    width:20vh;
+  }
+
+  100% {
+    left: 25%;
+    top: 0%;
+  }
+}
